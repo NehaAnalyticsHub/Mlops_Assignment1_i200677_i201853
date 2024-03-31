@@ -11,7 +11,7 @@ git commit -m "Initial commit"
 # Add the GitHub repository as a remote
 git remote add origin repolink
 
-# Push your changes to GitHub
+# Push changes to GitHub
 git push -u origin master
 
 git checkout -b dev
