@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Image') {
             steps {
-                dir('C:/Users/Lenovo/Desktop/i200677_i201853_MlopsA1/Dockerfile') {
+                dir('C:/Users/Lenovo/Desktop/i200677_i201853_MlopsA1') {
                     bat 'docker build -t mlopsassignmentimage .'
                 }
             }
