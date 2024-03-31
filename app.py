@@ -15,10 +15,12 @@ def preprocess_input(data):
     scaler = StandardScaler()
     return scaler.fit_transform(data)
 
+
 # Route for home page
 @app.route('/')
 def home():
     return render_template('index.html')
+
 
 # Route to handle form submission and show predictions
 @app.route('/predict', methods=['POST'])
