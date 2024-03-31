@@ -1,5 +1,5 @@
 test:
-    python -m test.py
+    python -m app.py
 
 install:
     pip install -r requirements.txt
