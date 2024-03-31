@@ -2,17 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage('Build and Push Docker Image') {
+        stage('Checkout') {
             steps {
-                script {
-                    // Clone repository
-                    git 'https://github.com/NehaAnalyticsHub/Mlops_Assignment1_i200677_i201853.git'
-                    
-                    // Build Docker image
-                    sh 'docker build -t mlopsimage .'
-                    
-                }
+                git branch: 'main', url: 'https://github.com/NehaAnalyticsHub/Mlops_Assignment1_i200677_i201853.git'
             }
         }
+
+        stage('Build Image') {
+            steps {
+                bat 'docker build -t a1_image .'
+            }
+        }
+
     }
 }
