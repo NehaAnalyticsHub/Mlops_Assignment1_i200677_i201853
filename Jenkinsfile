@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Image') {
             steps {
-                bat 'docker build -t a1_image .'
+                bat 'docker build -t mlopsassignmentimage .'
             }
         }
 
