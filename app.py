@@ -47,11 +47,11 @@ def predict():
             'fbs': [fbs], 'restecg': [restecg], 'thalach': [thalach], 'exang': [exang], 'oldpeak': [oldpeak],
             'slope': [slope], 'ca': [ca], 'thal': [thal]
         })
-        input_data = preprocess_input(input_data)
+        input_data1 = preprocess_input(input_data)
 
         # Get predictions from both models
-        dt_prediction = clf_decision_tree.predict(input_data)
-        svc_prediction = clf_svc.predict(input_data)
+        dt_prediction = clf_decision_tree.predict(input_data1)
+        svc_prediction = clf_svc.predict(input_data1)
 
         # Render predictions on the result page
         return render_template('result.html', dt_prediction=dt_prediction[0], svc_prediction=svc_prediction[0])
